@@ -188,5 +188,4 @@ require("oil.actions").refresh = false
 require("oil.actions").select_vsplit = false
 require("oil.actions").select_split= false
 require("oil.actions").select_tab= false
-require("oil.actions").preview= false
 require("oil.actions").close= false
