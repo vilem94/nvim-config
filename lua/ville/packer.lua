@@ -2,23 +2,7 @@
 vim.cmd [[packadd packer.nvim]]
 
 
-local cmp = require('cmp')
---
--- cmp.setup({
---     sources = {
---         {name = 'copilot'},
---         {name = 'nvim_lsp'},
---     },
---     mapping = cmp.mapping.preset.insert({
---         ['<CR>'] = cmp.mapping.confirm({
---             -- documentation says this is important.
---             -- I don't know why.
---             behavior = cmp.ConfirmBehavior.Replace,
---             select = false,
---         })
---     })
--- })
---
+
 return require('packer').startup(function(use)
 	  -- Packer can manage itself
 	  use 'wbthomason/packer.nvim'
@@ -155,7 +139,24 @@ return require('packer').startup(function(use)
           tag = "*"
       }
 
-
+require('mason').setup()
+local cmp = require('cmp')
+--
+-- cmp.setup({
+--     sources = {
+--         {name = 'copilot'},
+--         {name = 'nvim_lsp'},
+--     },
+--     mapping = cmp.mapping.preset.insert({
+--         ['<CR>'] = cmp.mapping.confirm({
+--             -- documentation says this is important.
+--             -- I don't know why.
+--             behavior = cmp.ConfirmBehavior.Replace,
+--             select = false,
+--         })
+--     })
+-- })
+--
 
 
   end)
